@@ -1,0 +1,11 @@
+The "Blop"-Sound and the "Drummroll" sound are licensed under creative commons 0:
+https://creativecommons.org/publicdomain/zero/1.0/
+You can find them here:
+Blop:     https://freesound.org/s/161628/
+Drumroll: https://freesound.org/s/428611/
+
+The "Win" and the "Big Win" sound are licensed under the Attribution License:
+https://creativecommons.org/licenses/by/3.0/
+You can find them here: 
+Win: https://freesound.org/s/391539/
+Big Win: https://freesound.org/s/456968/

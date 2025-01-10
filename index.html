@@ -1,0 +1,2052 @@
+<!-- 
+-discuss points
+-->
+
+
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Beat Your Prof - 2025- Das Rematch--</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/byp.css">
+	
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<!-- <script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script> -->
+
+	<style>
+		/* Custom CSS */
+		.image-text-slide {
+    		/* display: flex; */
+    		/* justify-content: center;  */
+    		/* align-items: center; */
+    		/* flex-direction: column; */
+			transition: all 2.5s ease-in-out; /* Smooth transition to row */
+		}
+		
+		#slideImage {
+			margin-top: -8vh;
+		    width: 62%; /* Large size for initial view */
+		}
+		
+		/* #slideImage.fragment.current-fragment {  */
+		     /* width: 30%; Smaller size when it slides to the left */
+			 /* transition: width 2.5s ease-in-out; */
+		 /* } */
+		
+		#slideText {
+		    /*display: none; Initially hidden*/
+			position: absolute; /*Step 2: Absolutely position the text*/
+  			right: 3vh; /* Align to the left */
+  			bottom: -200px; /* Start outside the container. Adjust as needed */
+			opacity: 0;
+		}
+
+		#slideImage, #slideText {
+		    transition: all 2.5s ease-in-out, opacity 2.5s ease-in-out;
+		}
+
+		/* Simulate moving to side-by-side layout */
+		/* .side-by-side-layout #slideImage, .side-by-side-layout #slideText { */
+			
+		/* } */
+
+		.image-text-slide.side-by-side-layout #slideImage {
+		    width: 45%; /*Adjusted width for side-by-side layout*/
+			transform: translateX(-50%); /*Adjust as needed to move side by side*/
+		}
+
+		.image-text-slide.side-by-side-layout #slideText {
+			transform: translateY(-130%);
+		    opacity: 1; /* Make text visible in side-by-side layout */
+		}
+
+		/* von mir */
+
+		/* Slide Container for side-by-side images with center divider */
+		.slide-container {
+			width: 100%;
+			height: 80%;
+			display: flex;
+			flex-direction: row; /* Ensures horizontal layout */
+			position: relative;
+			align-items: center;
+			margin: 0 auto; /* Centers slide on page */
+		}
+
+
+		/* Left and Right Image Sections */
+		.side {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+		}
+
+		.side img {
+			width: 90%; /* Increased width for larger images */
+			max-width: 600px;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		.caption {
+			margin-top: 10px;
+			font-size: 1.4em; /* Larger font size for captions */
+			font-weight: bold;
+		}
+
+		/* Additional classes and effects */
+		.image-text-slide {
+			transition: all 2.5s ease-in-out;
+		}
+		
+	</style>
+
+</head>
+
+<body style="font-family: Roboto;">
+	<div class="reveal">
+		<div class="slides">
+			<div hidden="true" style="position: fixed; bottom: 0%; font-size: 70pt;">
+				Profs: <div id="profs">0</div>
+			</div>
+			<div hidden="true" style="position: fixed; bottom: 0%; right: 0%; font-size: 70pt;">
+				Studis: <div id="studis">0</div>
+			</div>
+			<section noPoints>
+				<div class = container style="position: relative;">
+					<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="50%" style="border: none; background: none; box-shadow: none;"/>
+					<h1 style="position: absolute; top: 50%; left: 48%; transform: translate(-50%, -50%);"> <nobr>Beat your</nobr><br>Prof '25</h1>
+				</div>
+			</section>
+			
+			
+		
+			<!-- <section>
+				<section nopoints>
+					<h3>Rechte</h3>
+					Diese Website wurde mit der Javascript-Library <a href="https://github.com/hakimel/reveal.js">reveal.js</a> erstellt.
+					<br>Irgendwo wird intern <a href="https://github.com/mathjax/MathJax">MathJax</a> benutzt.
+					<br><br>Der "<a href="https://freesound.org/s/161628/">Blop</a>"-Sound und der "<a href="https://freesound.org/s/428611/">Drummroll</a>"-Sound liegen unter der "<a href="https://creativecommons.org/publicdomain/zero/1.0/">creative commons 0</a>"-Lizenz.
+					<br>
+					Der "<a href="https://freesound.org/s/391539/">Win</a>" und der "<a href="https://freesound.org/s/456968/">Big Win</a>" Sound liegen unter der "<a href="https://creativecommons.org/licenses/by/3.0/">Attribution License</a>".
+				</section> 
+
+				 <section nopoints>
+					<h3>Erklärung</h3>
+					<ul>
+						<li>
+							Vieles ist Zeitgesteuert, also klicke nicht zu schnell durch, sonst passieren komische Dinge
+						</li>
+						<li>
+							Steuerung:
+							<ul>
+								<li>
+									<span class="hightlightTU">Alt+P</span> Punkt an Profs
+								</li>
+								<li>
+									<span class="hightlightTU">Alt+O</span> Punkt an Studis
+								</li>
+								<li>
+									<span class="hightlightTU">Alt+shift+P/O</span> Punkt abziehen
+								</li>
+								<li>
+										<span class="hightlightTU">f</span> Vollbild
+									</li>
+							</ul>
+						</li>
+						<li>
+							Die voreingestellten Punkte sind die, die am Abend selbst erzielt wurden
+						</li>
+					</ul>
+				</section>
+			</section> -->
+
+		<section>
+			<section noPoints>
+				<h3>jDPG Regionalgruppe Dortmund</h3>
+				Wir suchen neue Mitglieder!<br><br>
+				Kontakt: <em class="hightlightTU">dortmund@jdpg.de</em> und <em class="hightlightTU">dortmund.jdpg.de</em><br><br>
+				<!-- Nächstes &bdquo;Meet your Prof&ldquo;: 04.06. <br> 19 Uhr im &bdquo;Kumpel Erich&ldquo; mit Herrn Betz -->
+			</section>
+			<section noPoints>
+				<h2>Der Preis</h2>
+				Die Ehre und ...<br>
+				<!-- Hier müssen wir uns nen Preis Ausdenken -->
+				<div class="fragment fade-up">
+					<img width="60%" data-src="media/einstein.jpg"><br>
+					der <span class="hightlightTU">TU-Grüne Einstein</span>
+				</div>
+			</section>
+
+			<section noPoints>
+				<h2>Die Prüfungsordnung</h2>
+				<br>
+				<ul>
+					<li>
+					 Disziplinen:
+						<table>
+							<!-- <tr>
+								<td>Quizfragen</td>
+								<td class="hightlightTU">1 Punkt</td>
+							</tr> -->
+							<tr>
+								<td>Herausforderungen</td>
+								<td class="hightlightTU">1 Punkt</td>
+							</tr>
+							<tr>
+								<td>Finale</td>
+								<td class="hightlightTU">2 Punkte</td>
+							</tr>
+						</table>
+					</li>
+					<!-- <li>Quizfragen werden per Lautstärke entschieden</li> -->
+					<li>Bei den Spielen treten 2 Studierende an</li>
+					<!-- <li>Diese werden in jedem Spiel neu aus dem Publikum gewählt</li> -->
+					<li>Diese werden aus dem Publikum gewählt</li>
+				</ul>
+			</section>
+
+		</section>
+			
+			<section globalPoints noPoints>
+				<table width="100%" style="margin-left: 3%">
+					<tr>
+						<td>
+							<div class = container style="position: relative;">
+								<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+								<h1 style="position: absolute; top: 50%; left: 43%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Profs</nobr><p class="punkteProfs">0</p></h1>
+							</div>
+						</td>
+						<td>
+							<div class = container style="position: relative;">
+								<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+								<h1 style="position: absolute; top: 50%; left: 44%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Studis</nobr><p class="punkteStudis">0</p></h1>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</section>
+						
+			
+			
+		<section>
+				
+
+
+		
+
+
+<!-- neue Spiele fürs rematch-->
+
+			<section game="Emojis" noPoints>
+				<h3>Herausforderung 1</h3>
+				<h1>Emoji-Laborchaos</h1>
+				<div class="hightlightTU">1 Punkt</div>
+			</section>
+			<section noPoints>
+				<h3>Regeln</h3>
+				<ul>
+					<li>Es werden Bilder von Emojis gezeigt, welche einen Praktikumsversuch darstellen</li>
+					<li>Ziel: Erraten, welcher Praktikumsversuch dargestellt wird </li>
+					<li>Glaubt ein Team den Song zu erkennen, ruft es "Stopp"</li>
+					<li>Richtige Antwort &rarr; 1 Punkt</li>
+					<li>Falsche Antwort &rarr; Das andere Team darf raten</li>
+					<li>Das Team mit den meisten <span class="hightlightTU">Spielpunkten</span> gewinnt Herausforderung</li>
+				</ul>
+			</section>
+
+		<section noPoints>
+			<h3>Es folgt ein Beispiel</h3>
+		</section>
+		<!-- -webkit-transform: translate(0, 20%); -->
+		<!-- transform: translate(0, 20%); -->
+		<section>
+			<!-- Bild eifügen -->
+			<!-- <img id="image" src="Pfad/zum/Bild.jpg" alt="Beispielbild" style="display: none; width: 50%; height: auto;"> -->
+			<span style='font-size:400px;'>&#128018;</span>
+			<span style='font-size:400px;'>&#128299;</span>
+					
+			<!-- Lösung -->
+			<h3 sound="blop" class="fragment popup create" data-fragment-index="8" style="position:absolute; top: 100%; left: 50%; transform: translate(-50%, -50%);">
+				<div class="imagetext">Affenschuss</div>
+			</h3>	
+
+		</section>
+
+			<section noPoints>
+				<h3>Herausforderung 1</h3>
+				<h1>Emoji-Laborchaos</h1>
+				<div class="hightlightTU">1 Punkt</div>
+			</section>
+
+			<section>
+				<span style='font-size:400px;'>&#127921;</span>
+				<span style='font-size:400px;'>&#127754;</span>
+				<span style='font-size:400px;'>&#129514;</span>
+
+				<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+
+
+				<!-- Lösung -->
+				<h3 sound="blop" class="fragment popup create" data-fragment-index="8" style="position:absolute; top: 100%; left: 50%; transform: translate(-50%, -50%);">
+					<div class="imagetext">Kugelfallviskosimeter</div>
+				</h3>		
+			</section>
+
+			<section stopTimer>
+				<span style='font-size:400px;'>&#128167;</span>
+				<span style='font-size:400px;'>&#128293;</span>
+				<span style='font-size:400px;'>&#9832;</span>
+
+				<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+
+						
+				<!-- Lösung -->
+				<h3 sound="blop" class="fragment popup create" data-fragment-index="8" style="position:absolute; top: 100%; left: 50%; transform: translate(-50%, -50%);">
+					<div class="imagetext">Verdampfungswärme</div>
+				</h3>		
+			</section>
+
+
+			<section stopTimer>
+				<span style='font-size:400px;'>&#128564;</span>
+				<span style='font-size:400px;'>&#128248;</span>
+
+				<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+
+						
+				<!-- Lösung -->
+				<h3 sound="blop" class="fragment popup create" data-fragment-index="8" style="position:absolute; top: 100%; left: 50%; transform: translate(-50%, -50%);">
+					<div class="imagetext">Trägheitsmoment</div>
+				</h3>		
+			</section>
+
+			<section stopTimer>
+				<span style='font-size:400px;'>&#127926;</span>
+				<span style='font-size:400px;'>&#128663;</span>
+				<span style='font-size:400px;'>&#128200;</span>
+
+				<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+
+						
+				<!-- Lösung -->
+				<h3 sound="blop" class="fragment popup create" data-fragment-index="8" style="position:absolute; top: 100%; left: 50%; transform: translate(-50%, -50%);">
+					<div class="imagetext">Dopplereffekt</div>
+				</h3>		
+			</section>
+
+			<section stopTimer>
+				<h3>Kurze Werbeunterbrechung</h3>
+				<div class="fragment fade-up">
+					<img width="30%" data-src="media/dopplers.jpg">
+				</div>
+			</section>
+
+
+			<section stopTimer>
+				<span style='font-size:400px;'>&#128161;</span>
+				<span style='font-size:400px;'>&#128268;</span>
+
+				<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+
+						
+				<!-- Lösung -->
+				<h3 sound="blop" class="fragment popup create" data-fragment-index="8" style="position:absolute; top: 100%; left: 50%; transform: translate(-50%, -50%);">
+					<div class="imagetext">Fotoeffekt</div>
+				</h3>		
+			</section>
+
+			<section stopTimer>
+				<span style='font-size:400px;'>&#128208;</span>
+				<span style='font-size:400px;'>&#9762;</span>
+
+				<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+
+						
+				<!-- Lösung -->
+				<h3 sound="blop" class="fragment popup create" data-fragment-index="8" style="position:absolute; top: 100%; left: 50%; transform: translate(-50%, -50%);">
+					<div class="imagetext">Reichweite von Alphastrahlung</div>
+				</h3>		
+			</section>
+
+			<section stopTimer>
+				<span style='font-size:400px;'>&#128738;</span>
+				<span style='font-size:400px;'>&#9878;</span>
+
+				<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+
+						
+				<!-- Lösung -->
+				<h3 sound="blop" class="fragment popup create" data-fragment-index="8" style="position:absolute; top: 100%; left: 50%; transform: translate(-50%, -50%);">
+					<div class="imagetext">Milikan Effekt</div>
+				</h3>		
+			</section>
+
+			<section stopTimer>
+				<h1>Ergebnis</h1>
+			</section>
+			</section>
+
+			<section globalPoints noPoints>
+			<table width="100%" style="margin-left: 3%">
+				<tr>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 43%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Profs</nobr><p class="punkteProfs">0</p></h1>
+						</div>
+					</td>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 44%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Studis</nobr><p class="punkteStudis">0</p></h1>
+						</div>
+					</td>
+				</tr>
+			</table>
+			</section>
+
+
+		<section>	
+		<!-- <section noPoints> -->
+			<section game="LostinLyrics" noPoints>
+				<h3>Herausforderung 2</h3>
+				<h1>Lost in Lyrics</h1>
+				<div class="highlightTU">1 Punkt</div>
+			</section>
+			
+			<section noPoints>
+				<h3>Regeln</h3>
+				<ul>
+					<li>Es wird gleichzeitig gespielt</li>
+					<li>Es werden nach und nach Songzeilen in einer übersetzten Sprache vorgelesen</li>
+					<li>Zuerst wird die erste Strophe/ das Intro aufgedeckt, anschließend der Refrain</li>
+					<li>Glaubt ein Team den Song zu erkennen, ruft es "Stopp"</li>
+					<li>Richtige Antwort &rarr; 1 Punkt</li>
+					<li>Falsche Antwort &rarr; Das andere Team darf raten</li>
+				</ul>
+			</section>
+			
+			<section noPoints>
+				<h3>Es folgt ein Beispiel</h3>
+			</section>
+			
+			<section>
+				<!-- Erste Strophe -->
+				<ul style="margin-top: -0vh">
+					<li class="fragment fade-in" data-fragment-index="0">
+						Früher regierte ich die Welt <br>
+						Die Meere stiegen an, wenn ich es befahl <br>
+						Jetzt schlafe ich morgens allein <br>
+						Kehre die Straßen, die mir früher gehörten
+					</li>
+
+					<!-- Audio Element für die erste Strophe -->
+					<audio class="fragment audio" data-fragment-index="1" id="audioVerse1">
+						<source src="media2/Lyrik/VivaLaVida/Strophe1.mp3" type="audio/mp3"/>
+					</audio>
+					
+					
+					<!-- Refrain -->
+					<li class="fragment fade-in" data-fragment-index="2">
+						Ich höre die Glocken Jerusalems läuten <br>
+						Römische Kavalleriechöre singen <br>
+						Sei mein Spiegel, mein Schild und Schwert <br>
+						Meine Missionare auf fremdem Boden
+					</li>
+
+					<!-- Audio Element für den Refrain -->
+					<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+						<source src="media2/Lyrik/VivaLaVida/Refrain.mp3" type="audio/mp3"/>
+					</audio>
+				</ul>
+			
+				<!-- Songtitel 
+				<div class="fragment fade-in highlightTU" data-fragment-index="8">
+					Viva La Vida - Coldplay
+				</div>
+			-->
+			</section>
+			<section noPoints stopTimer>
+				Titel
+				<h3>&bdquo;Viva La Vida - Coldplay &ldquo;</h3>
+			</section>
+			<section noPoints>
+				<iframe data-autoplay width="1120" height="630" src="https://www.youtube.com/embed/dvgZkm1xWPE?si=5D-BWp6FCuV3QqnC" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+			</section>
+			
+
+			<section noPoints>
+				<h3>Herausforderung ...</h3>
+				<h1>Lost in Lyrics</h1>
+				<div class="hightlightTU">1 Punkt</div>
+			</section>
+
+			<section>
+				<!-- Erste Strophe -->
+				<ul style="margin-top: -0vh">
+					<li class="fragment fade-in" data-fragment-index="0">
+						Heute Abend werde ich mich richtig gut amüsieren <br>
+						Ich fühle mich lebendig<br>
+						Und die Welt werde ich auf den Kopf stellen<br>
+						Und in Ekstase schweben
+					</li>
+
+				<!-- Audio Element für die erste Strophe -->
+				<audio class="fragment audio" data-fragment-index="1" id="audioVerse1">
+					<source src="media2/Lyrik/Queen/Strophe1.mp3" type="audio/mp3"/>
+				</audio>
+					
+					<!-- Audio Element für den Refrain -->
+					<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+						<source src="media2/Lyrik/Queen/Refrain.mp3" type="audio/mp3"/>
+					</audio>
+					
+					<!-- Refrain -->
+					<li class="fragment fade-in" data-fragment-index="2">
+						Halt mich jetzt nicht auf
+						Ich habe so eine gute Zeit. Ich habe Spaß<br>
+						Halt mich jetzt nicht auf, 
+						wenn du eine gute Zeit haben willst rufen Sie mich einfach an<br>
+
+						Halt mich jetzt nicht auf, 
+						denn ich habe eine gute Zeit<br>
+						Halt mich jetzt nicht auf
+						Ja, ich habe eine gute Zeit<br>
+						Ich will überhaupt nicht aufhören, ja
+					</li>
+				</ul>
+			
+				<!-- Songtitel 
+				<div class="fragment fade-in highlightTU" data-fragment-index="8">
+					Don't stop me now - Queen
+				</div>
+			-->
+			</section>
+			<section>
+				Titel
+				<h3>&bdquo;Don't stop me now - Queen &ldquo;</h3>
+			</section>
+			<section >
+				<iframe data-autoplay width="1120" height="630" src="https://www.youtube.com/embed/HgzGwKwLmgM?si=p1bqP7e4EvpZERi1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+			</section>
+
+			<section>
+				<!-- Erste Strophe -->
+				<ul style="margin-top: -0vh">
+					<li class="fragment fade-in" data-fragment-index="0">
+						Die Uhr schlägt zur vollen Stunde <br>
+						und die Sonne beginnt unterzugehen<br>
+						Immer noch genug Zeit herauszufinden<br>
+						wie ich meine Jagt verschwinden zu lassen<br>
+						Ich habe es richtig gemacht bis jetzt<br>
+						Es ist das Tageslicht das mir zeigt wie<br>
+						und wenn die Nacht beginnt ruft die Einsamkeit<br>
+					</li>
+
+				<!-- Audio Element für die erste Strophe -->
+				<audio class="fragment audio" data-fragment-index="1" id="audioVerse1">
+					<source src="media2/Lyrik/Dance/Strophe1.mp3" type="audio/mp3"/>
+				</audio>
+					
+					<!-- Audio Element für den Refrain -->
+					<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+						<source src="media2/Lyrik/Dance/Refrain.mp3" type="audio/mp3"/>
+					</audio>
+					
+					<!-- Refrain -->
+					<li class="fragment fade-in" data-fragment-index="2">
+						Oh! ich will mit jemanden tanzen<br>
+						ich will die hitze mit jemanden spüren<br>
+						Yeah! ich will mit jemanden tanzen<br>
+						mit jemanden der mich liebt<br>
+					</li>
+				</ul>
+			
+				<!-- Songtitel 
+				<div class="fragment fade-in highlightTU" data-fragment-index="8">
+					I Wanna Dance With Somebody (Who Loves Me) - Whitney Houston
+
+				</div>
+			-->
+			</section>
+			<section>
+				Titel
+				<h3>&bdquo;I Wanna Dance With Somebody (Who Loves Me) - Whitney Houston
+					&ldquo;</h3>
+			</section>
+			<section noPoints>
+				<iframe data-autoplay width="1120" height="630" src="https://www.youtube.com/embed/eH3giaIzONA?si=sj1H-KB8qHeQVuV0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+			</section>
+
+			<section>
+				<!-- Erste Strophe -->
+				<ul style="margin-top: -0vh">
+					<li class="fragment fade-in" data-fragment-index="0">
+						Sie war mehr wie eine Schönheitskönigin aus einem Film <br>
+						Ich sagte: von mir aus. Aber was meinst du damit, dass ich derjenige bin, <br>
+						der auf dem Parkett in der Runde tanzen wird <br>
+						Sie sagte, ich sei es, der auf dem Parkett in der Runde tanzen wird
+					</li>
+
+				<!-- Audio Element für die erste Strophe -->
+				<audio class="fragment audio" data-fragment-index="1" id="audioVerse1">
+					<source src="media2/Lyrik/Jackson/Strophe1.mp3" type="audio/mp3"/>
+				</audio>
+					
+					<!-- Audio Element für den Refrain -->
+					<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+						<source src="media2/Lyrik/Jackson/Refrain.mp3" type="audio/mp3"/>
+					</audio>
+					
+					<!-- Refrain -->
+					<li class="fragment fade-in" data-fragment-index="2">
+						Billie Jean ist nicht meine Geliebte<br>
+						Sie ist nur ein Mädchen, das behauptet ich sei es<br>
+						Aber das Kind ist nicht mein Sohn<br>
+						Sie sagt, ich sei derjenige, aber das Kind ist nicht mein Sohn
+					</li>
+				</ul>
+			
+				<!-- Songtitel 
+				<div class="fragment fade-in highlightTU" data-fragment-index="8">
+					Billie Jean - Michael Jackson
+				
+				</div>
+			-->
+			</section>
+			<section>
+				Titel
+				<h3>&bdquo;Billie Jean - Michael Jackson
+					&ldquo;</h3>
+			</section>
+			<section noPoints>
+				<iframe data-autoplay width="1120" height="630" src="https://www.youtube.com/embed/Zi_XLOBDo_Y?si=2IZSGjkCtNF9mBOA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+			</section>
+
+			<section>
+				<!-- Erste Strophe -->
+				<ul style="margin-top: -0vh">
+					<li class="fragment fade-in" data-fragment-index="0">
+						Es war einmal,<br>
+						vor noch gar nicht allzulanger Zeit -
+					</li>
+
+				<!-- Audio Element für die erste Strophe -->
+				<audio class="fragment audio" data-fragment-index="1" id="audioVerse1">
+					<source src="media2/Lyrik/BonJovi/Strophe1.mp3" type="audio/mp3"/>
+				</audio>
+					
+					<!-- Audio Element für den Refrain -->
+					<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+						<source src="media2/Lyrik/BonJovi/Refrain.mp3" type="audio/mp3"/>
+					</audio>
+					
+					<!-- Refrain -->
+					<li class="fragment fade-in" data-fragment-index="2">
+						Wir sind fast da,<br>
+						leben von einem Gebet.<br>
+						Nimm meine Hand, wir schaffen es, ich schwör's!<br>
+						Oh, leben von einem Gebet.
+					</li>
+				</ul>
+			
+				<!-- Songtitel 
+				<div class="fragment fade-in highlightTU" data-fragment-index="8">
+					Livin’ on a Prayer - Bon Jovi
+
+				</div>
+			-->
+			</section>
+			<section>
+				Titel
+				<h3>&bdquo;Livin’ on a Prayer - Bon Jovi &ldquo;</h3>
+			</section>
+			<section >
+				<iframe data-autoplay width="1120" height="630" src="https://www.youtube.com/embed/lDK9QqIzhwk?si=Wt35_noiw0nj9hl6" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+			</section>
+
+			<section>
+				<!-- Erste Strophe -->
+				<ul style="margin-top: -0vh">
+					<li class="fragment fade-in" data-fragment-index="0">
+						Who will freeze us this moment? /
+						It couldn't be better<br>
+						Think of the days behind us<br>
+						How long we're sharing joy and tears<br>
+						Everyone's walking through fire for one another<br>
+						We'll never leave eachother alone in the rain<br>
+						And as long as our hearts guide us<br>
+						It'll always stay like that
+					</li>
+
+				<!-- Audio Element für die erste Strophe -->
+				<audio class="fragment audio" data-fragment-index="1" id="audioVerse1">
+					<source src="media2/Lyrik/AufUns/Strophe1.mp3" type="audio/mp3"/>
+				</audio>
+					
+					<!-- Audio Element für den Refrain -->
+					<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+						<source src="media2/Lyrik/AufUns/Refrain.mp3" type="audio/mp3"/>
+					</audio>
+					
+					<!-- Refrain -->
+					<li class="fragment fade-in" data-fragment-index="2">
+						A cheer for us (us) /
+						For this life /
+						For this moment <br>
+						That will always remain <br>
+						A cheer for us (us) /
+						For now and forever /
+						For a day of infinity <br>
+					</li>
+				</ul>
+			
+				<!-- Songtitel 
+				<div class="fragment fade-in highlightTU" data-fragment-index="8">
+					Auf uns - Andreas Bourani
+				</div>
+			-->
+			</section>
+			<section>
+				Titel
+				<h3>&bdquo;Auf uns - Andreas Bourani &ldquo;</h3>
+			</section>
+			<section >
+				<iframe data-autoplay width="1120" height="630" src="https://www.youtube.com/embed/k9EYjn5f_nE?si=C75A2IfTUJ0RgwvC" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+			</section>
+
+			<section>
+				<h1>Ergebnis</h1>
+			</section>
+		</section>
+
+
+		<section globalPoints noPoints>
+			<table width="100%" style="margin-left: 3%">
+				<tr>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 43%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Profs</nobr><p class="punkteProfs">0</p></h1>
+						</div>
+					</td>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 44%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Studis</nobr><p class="punkteStudis">0</p></h1>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+
+
+
+		<section stopTimer>
+			<section game="AiBilderRaten" noPoints>
+				<h3>Herausforderung 3</h3>
+				<h1>AI Bilder Raten</h1>
+				<div class="hightlightTU">1 Punkt</div>
+			</section>
+			<section noPoints>
+				<h3>Regeln</h3>
+				<ul>
+					<li>Ein künstlich erstelltes Bild wird gezeigt</li>
+					<li>Ziel: Den Eingabebegriff erraten, mit dem das Bild erstellt wurde </li>
+					<li>Es gibt 3 Antwortmöglichkeiten</li>
+					<li>Antworten werden an die Tafel geschrieben</li>
+					<li>Das Team mit den meisten <span class="hightlightTU">Spielpunkten</span> gewinnt Herausforderung</li>
+				</ul>
+			</section>
+		
+			<section noPoints>
+				<h3>Es folgt ein Beispiel</h3>
+			</section>
+			<!-- -webkit-transform: translate(0, 20%); -->
+			<!-- transform: translate(0, 20%); -->
+			<section noPoints>
+				<div class="image-text-slide">
+					<img data-src="media/aibilder/laser.jpeg" alt="Laser" id="slideImage">
+					<div class="fragment" id="slideText" data-fragment-index="1">
+						<p class="fragment ans_sound" data-fragment-index="2" ></p>
+						<div class="fragment popup delete" data-fragment-index="3">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Laser</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Schmetterling</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Lichtgeschwindigkeit</td>
+								</tr>
+							</table>
+						</div>
+						<div class="fragment popup create" data-fragment-index="3">
+							<table>
+								<tr class="rightanswer">
+									<td>a)</td>
+									<td>Laser</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Schmetterling</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Lichtgeschwindigkeit</td>
+								</tr>	
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section noPoints>
+				<h3>Herausforderung 3</h3>
+					<h1>AI Bilder Raten</h1>
+					<div class="hightlightTU">1 Punkt</div>
+			</section>
+
+			<section>
+				<div class="image-text-slide">
+					<img data-src="media2/aibilder/Gedankenfluss.jpeg" alt="gedankenfluss" id="slideImage">
+					<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+					<div class="fragment" data-fragment-index="1" id="slideText">						
+						<p class="fragment ans_sound" data-fragment-index="3" ></p>
+						<div class="fragment popup delete" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Kosmischer Tanz</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Gedankenfluss</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Rauch</td>
+								</tr>
+							</table>
+						</div>
+						<div class="fragment popup create" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Kosmischer Tanz</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="rightanswer">
+									<td>b)</td>
+									<td>Gedankenfluss</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Rauch</td>
+								</tr>	
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section stopTimer>
+				<div class="image-text-slide">
+					<img  data-src="media2/aibilder/Kraefte.jpeg" alt="kraefte" id="slideImage">
+					<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+					<div class="fragment" data-fragment-index="1" id="slideText">
+						<p class="fragment ans_sound" data-fragment-index="3" ></p>
+						<div class="fragment popup delete" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Krieg</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Tod</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Kräfte</td>
+								</tr>
+							</table>
+						</div>
+						<div class="fragment popup create" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Krieg</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Tod</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="rightanswer">
+									<td>c)</td>
+									<td>Kräfte</td>
+								</tr>	
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section stopTimer>
+				<div class="image-text-slide">
+					<img data-src="media2/aibilder/Netzwerk.jpeg" alt="network" id="slideImage">
+					<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+					<div class="fragment" data-fragment-index="1" id="slideText">
+						<p class="fragment ans_sound" data-fragment-index="3" ></p>
+						<div class="fragment popup delete" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Atommodell</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Netzwerk</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Gehirn</td>
+								</tr>
+							</table>
+						</div>
+						<div class="fragment popup create" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Atommodell</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="rightanswer">
+									<td>b)</td>
+									<td>Netzwerk</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Gehirn</td>
+								</tr>	
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section stopTimer>
+				<div class="image-text-slide">
+					<img data-src="media2/aibilder/RadioaktiverZerfall.jpeg" alt="radioactivity" id="slideImage">
+					<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+					<div class="fragment fade-in" data-fragment-index="1" id="slideText">
+						<p class="fragment ans_sound" data-fragment-index="3" ></p>
+						<div class="fragment popup delete" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Kernkraftwerk</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Einsamkeit</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Radioaktiver Zerfall</td>
+								</tr>
+							</table>
+						</div>
+						<div class="fragment popup create" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Kernkraftwerk</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Einsamkeit</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="rightanswer">
+									<td>c)</td>
+									<td>Radioaktiver Zerfall</td>
+								</tr>	
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section stopTimer>
+				<div class="image-text-slide">
+					<img  data-src="media2/aibilder/Schwingungen.jpeg" alt="schwingung" id="slideImage">
+					<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+					<div class="fragment" data-fragment-index="1" id="slideText">
+						<p class="fragment ans_sound" data-fragment-index="3" ></p>
+						<div class="fragment popup delete" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Schwingungen</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Welle</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Entspannung</td>
+								</tr>
+							</table>
+						</div>
+						<div class="fragment popup create" data-fragment-index="4">
+							<table>
+								<tr class="rightanswer">
+									<td>a)</td>
+									<td>Schwingungen</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Welle</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Entspannung</td>
+								</tr>	
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section stopTimer>
+				<div class="image-text-slide">
+					<img data-src="media2/aibilder/Darknet.jpeg" alt="darknet" id="slideImage">
+					<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+					<div class="fragment fade-in" data-fragment-index="1" id="slideText">
+						<p class="fragment ans_sound" data-fragment-index="3" ></p>
+						<div class="fragment popup delete" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Sensemann</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Dunkle Energie</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Darknet</td>
+								</tr>
+							</table>
+						</div>
+						<div class="fragment popup create" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Sensemann</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Dunkle Energie</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="rightanswer">
+									<td>c)</td>
+									<td>Darknet</td>
+								</tr>	
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section stopTimer>
+				<div class="image-text-slide">
+					<img  data-src="media2/aibilder/Stromkreis.jpeg" alt="strom" id="slideImage">
+					<h2> <div class="fragment trigger timer" seconds="30" data-fragment-index="2">00:30</div></h2>
+					<div class="fragment" data-fragment-index="1" id="slideText">
+						<p class="fragment ans_sound" data-fragment-index="3" ></p>
+						<div class="fragment popup delete" data-fragment-index="4">
+							<table>
+								<tr class="answer">
+									<td>a)</td>
+									<td>Stromkreis</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Verkehrsnetz</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Schaltung</td>
+								</tr>
+							</table>
+						</div>
+						<div class="fragment popup create" data-fragment-index="4">
+							<table>
+								<tr class="rightanswer">
+									<td>a)</td>
+									<td>Stromkreis</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>b)</td>
+									<td>Verkehrsnetz</td>
+								</tr>
+								<tr><td></td></tr>
+								<tr class="answer">
+									<td>c)</td>
+									<td>Schaltung</td>
+								</tr>	
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>Ergebnis</h1>
+			</section>		
+		</section>
+
+		<section globalPoints noPoints>
+			<table width="100%" style="margin-left: 3%">
+				<tr>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 43%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Profs</nobr><p class="punkteProfs">0</p></h1>
+						</div>
+					</td>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 44%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Studis</nobr><p class="punkteStudis">0</p></h1>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+		<section stopTimer>
+			<section game="WerBinIch" noPoints>
+				<h3>Herausforderung 4</h3>
+				<h1 style="font-size: 3em;">Wer bin ich?</h1>
+				<div class="hightlightTU">1 Punkt</div>
+			</section>
+			<section noPoints>
+				<h3>Regeln</h3>
+				<ul>
+					<li>Jedem Team wird eine Person zugeteilt</li>
+					<li>Beide Teams müssen mittels ja und nein Fragen erraten, welche Person sie sind</li>
+					<li>Die Fragen werden vom Puplikum beantwortet</li>
+					<li>Wer zuerst die eigene Person errät gewinnt die Runde</li>
+					<li>Die zu erratenen Personen werden nacheinander in der Präsentation gezeigt</li>
+					<li>Das Team mit den meisten <span class="hightlightTU">Spielpunkten</span> gewinnt Herausforderung</li>
+				</ul>
+			</section>
+
+			<section noPoints>
+				<h3>Es folgt ein Beispiel</h3>
+			</section>
+
+			<section noPoints stopTimer>
+				<div class="slide-container">
+					<!-- Linke Seite -->
+					<div class="side">
+						<img src="media2/Wer/Debus.jpeg" alt="Debus">
+						<div class="caption">Dr. Debus</div>
+					</div>
+				
+					<!-- Vertikale grüne Linie -->
+					<!-- <div class="divider"></div> -->
+				
+					<!-- Rechte Seite -->
+					<div class="side">
+						<img src="media2/Wer/stoermer.jpeg" alt="stoermer">
+						<div class="caption">Störmer-Zöhl</div>
+					</div>
+			</section>
+
+			<section game="WerBinIch" noPoints>
+				<h3>Herausforderung 4</h3>
+				<h1 style="font-size: 3em;">Wer bin ich?</h1>
+				<div class="hightlightTU">1 Punkt</div>
+			</section>
+
+			<section>
+				<div class="slide-container">
+					<!-- Linke Seite -->
+					<div class="side">
+						<img src="media2/Wer/Bibi.jpeg" alt="Debus">
+						<div class="caption">Bibi Blocksberg</div>
+					</div>
+				
+					<!-- Vertikale grüne Linie -->
+					<!-- <div class="divider"></div> -->
+				
+					<!-- Rechte Seite -->
+					<div class="side">
+						<img src="media2/Wer/harry.jpeg" alt="stoermer">
+						<div class="caption">Herry Potter</div>
+					</div>
+			</section>
+
+			<section>
+				<h1>Bonusfrage</h1>
+				<div class="hightlightTU">1 Punkt</div>
+				<ul style="margin-top: -0vh">
+					<h3> <div class="fragment fade-in" data-fragment-index="1">
+						Was ist Bibis richtiger Name? </div> </h3> 
+					
+			
+					<h3><div class="fragment fade-in highlightTU" data-fragment-index="8">
+						<span class="hightlightTU">Brigitte</span></div></h3>
+
+			</section>	
+
+			<section>
+				<div class="slide-container">
+					<!-- Linke Seite -->
+					<div class="side">
+						<img src="media2/Wer/Hawking.jpeg" alt="Debus">
+						<div class="caption">Stephen Hawking</div>
+					</div>
+				
+					<!-- Rechte Seite -->
+					<div class="side">
+						<img src="media2/Wer/Einstein.jpeg" alt="stoermer">
+						<div class="caption">Albert Einstein</div>
+					</div>
+			</section>
+
+			<section>
+				<div class="slide-container">
+					<!-- Linke Seite -->
+					<div class="side">
+						<img src="media2/Wer/Taylor.jpeg" alt="Debus">
+						<div class="caption">Taylor Swift</div>
+					</div>
+				
+					<!-- Rechte Seite -->
+					<div class="side">
+						<img src="media2/Wer/Merkel.jpeg" alt="stoermer">
+						<div class="caption">Angela Merkel</div>
+					</div>
+			</section>
+
+			<section>
+				<div class="slide-container">
+					<!-- Linke Seite -->
+
+					<div class="side">
+						<img src="media2/Wer/Sheldon.jpeg" alt="stoermer">
+						<div class="caption">Sheldon Cooper</div>
+					</div>
+
+					<!-- Rechte Seite -->
+					<div class="side">
+						<img src="media2/Wer/sherlock.jpeg" alt="Debus">
+						<div class="caption">Sherlock Holmes</div>
+					</div>
+
+			</section>
+
+		</section>
+
+		<section globalPoints noPoints>
+			<table width="100%" style="margin-left: 3%">
+				<tr>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 43%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Profs</nobr><p class="punkteProfs">0</p></h1>
+						</div>
+					</td>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 44%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Studis</nobr><p class="punkteStudis">0</p></h1>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+								
+		<section>
+			<section noPoints>
+				<h2> <div class="fragment trigger timer" seconds="900">15:00</div> min. Pause</h2>
+			</section>
+		</section>
+
+		
+		<section globalPoints noPoints>
+			<table width="100%" style="margin-left: 3%">
+				<tr>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 43%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Profs</nobr><p class="punkteProfs">0</p></h1>
+						</div>
+					</td>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 44%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Studis</nobr><p class="punkteStudis">0</p></h1>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+
+		<section stopTimer>
+			<section game="Wii" noPoints>
+				<h3>Herausforderung 5</h3>
+				<h1 style="font-size: 3em;">Wii Party</h1>
+				<div class="hightlightTU">1 Punkt</div>
+			</section>
+			<section noPoints>
+				<h3>Regeln</h3>
+				<ul>
+					<li>Es werden drei Runden gespielt</li>
+					<li>Runde 1: Timber Topple</li>
+					<li>Runde 2: Jangle Wranglers</li>
+					<li>Runde 3: Flag Footrace</li>
+					<li>Für jede gewonnene Runde gibt es einen <span class="hightlightTU">Spielpunkt</span></li>
+				</ul>
+			</section>
+
+			<section>
+				<img data-src="media2/Bilder/Wii.jpeg" width="50%">
+			</section>
+		</section>
+		
+
+		<section globalPoints noPoints>
+			<table width="100%" style="margin-left: 3%">
+				<tr>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 43%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Profs</nobr><p class="punkteProfs">0</p></h1>
+						</div>
+					</td>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 44%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Studis</nobr><p class="punkteStudis">0</p></h1>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+
+		<section>
+			<section game="IntroMania" noPoints>
+				<h3>Herausforderung 6</h3>
+				<h1>IntroMania</h1>
+				<div class="hightlightTU">1 Punkt</div>
+			</section>
+			<section noPoints>
+				<h3>Regeln</h3>
+				<ul>
+					<li>Eine Film bzw. Serien Titelmusik wird gezeigt</li>
+					<li>Ziel: Es muss anhand des Introsongs der Name der Serie/ des Filmes erraten werden</li>
+					<li>Glaubt ein Team den Song zu erkennen, ruft es "Stopp"</li>
+					<li>Richtige Antwort &rarr; 1 Punkt</li>
+					<li>Falsche Antwort &rarr; Das andere Team darf raten</li>
+					<li>Das Team mit den meisten <span class="hightlightTU">Spielpunkten</span> gewinnt Herausforderung</li>
+				</ul>
+			</section>
+
+			<section noPoints>
+				<h3>Es folgt ein Beispiel</h3>
+			</section>
+
+			<section noPoints stopTimer>
+				<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+					<source src="media2/Intro/titanic.mp3" type="audio/mp3"/>
+				</audio>
+				<h3>Beispiel</h3>
+				<img data-src="media2/Intro/carefully/0.jpeg" width="70%">
+			</section>
+
+			<section noPoints stopTimer>
+				<h3>Titanic</h3>
+				<img data-src="media2/Intro/bilder/titanic.jpeg" width="30%">
+			</section>
+
+			<section noPoints>
+				<h3>Herausforderung 6</h3>
+				<h1>IntroMania</h1>
+				<div class="hightlightTU">1 Punkt</div>
+			</section>
+
+			<section noPoints stopTimer>
+				<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+					<source src="media2/Intro/heidi.mp3" type="audio/mp3"/>
+				</audio>
+
+				<h3>1. Song</h3>
+				<img data-src="media2/Intro/carefully/1.jpeg" width="45%">
+			</section>
+
+			<section noPoints stopTimer>
+				<h3>HEIDI</h3>
+				<img data-src="media2/Intro/bilder/heidi.jpeg" width="60%">
+			</section>
+
+
+
+
+			<section noPoints stopTimer>
+				<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+					<source src="media2/Intro/narnia.mp3" type="audio/mp3"/>
+				</audio>
+
+				<h3>2. Song</h3>
+				<img data-src="media2/Intro/carefully/2.jpeg" width="45%">
+			</section>
+
+			<section noPoints stopTimer>
+				<h3>Die Chroniken von Narnia</h3>
+				<img data-src="media2/Intro/bilder/narnia.jpeg" width="30%">
+			</section>
+
+
+			<section noPoints stopTimer>
+				<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+					<source src="media2/Intro/kevin.mp3" type="audio/mp3"/>
+				</audio>
+				<h3>3. Song</h3>
+				<img data-src="media2/Intro/carefully/3.jpeg" width="60%">
+			</section>
+
+			<section noPoints stopTimer>
+				<h3>Home Alone</h3>
+				<img data-src="media2/Intro/bilder/kevin.jpeg" width="30%">
+			</section>
+
+			<section noPoints stopTimer>
+				<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+					<source src="media2/Intro/indiana.mp3" type="audio/mp3"/>
+				</audio>
+				<h3>4. Song</h3>
+				<img data-src="media2/Intro/carefully/4.jpeg" width="65%">
+			</section>
+
+			<section noPoints stopTimer>
+				<h3>Indiana Jones</h3>
+				<img data-src="media2/Intro/bilder/indiana.jpeg" width="30%">
+			</section>
+
+			<section noPoints stopTimer>
+				<audio class="fragment audio" data-fragment-index="3" id="audioChorus">
+					<source src="media2/Intro/gummibaern.mp3" type="audio/mp3"/>
+				</audio>
+				<h3>5. Song</h3>
+				<img data-src="media2/Intro/carefully/5.jpeg" width="35%">
+			</section>
+
+			<section noPoints stopTimer>
+				<h3>Die Gummibären</h3>
+				<img data-src="media2/Intro/bilder/gummibaerchen.jpeg" width="30%">
+			</section>
+
+			<section>
+				<h1>Ergebnis</h1>
+			</section>
+		</section>
+
+		<section>
+			<h3>Aber beachte:</h3>
+			<img data-src="media2/Intro/carefully/6.jpeg" width="60%">
+		</section>
+
+		<section globalPoints noPoints>
+			<table width="100%" style="margin-left: 3%">
+				<tr>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 43%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Profs</nobr><p class="punkteProfs">0</p></h1>
+						</div>
+					</td>
+					<td>
+						<div class = container style="position: relative;">
+							<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+							<h1 style="position: absolute; top: 50%; left: 44%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Studis</nobr><p class="punkteStudis">0</p></h1>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+		
+
+
+			<section stopTimer>
+				<section game="Powerpoint" noPoints>
+					<h3>Herausforderung 7</h3>
+					<h1 style="font-size: 3em;">Powerpoint Karaoke</h1>
+					<div class="hightlightTU">1 Punkt</div>
+				</section>
+
+				<section noPoints>
+					<h3>Regeln</h3>
+					<ul>
+						<li>Jedem Team wird eine Präsentation zugeteilt</li>
+						<li>Die Präsentation wurden mit der einer KI erstellt</li>
+						<li>Passend zu den Wahlen müssen beide Teams versuchen, den Hörsaal von der Präsentation zu überzeugen</li>
+						<li>Jeses Team sieht die Präsentation während dem Vortrag zum ersten mal</li>
+						<li>Der Hörsaal entscheidet mittels Handzeichen, wer Präsentation überzeugender Vorgetragen wurde</li>
+						<li>Das Team mit den meisten Handzeichen gewinnt Herausforderung</li>
+					</ul>
+				</section>
+
+				<section>
+					<img data-src="media2/Bilder/Powerpoint.jpeg" width="50%">
+				</section>
+
+			</section>
+
+				
+			<section noPoints>
+				<section game="Powerpoint" noPoints>
+					<h3>Herausforderung 8</h3>
+					<h1 style="font-size: 3em;">Wer wird Milionär?</h1>
+					<div class="hightlightTU">1 Punkt</div>
+				</section>
+				<section noPoints>
+					<p class="fragment ans_sound" data-fragment-index="2"></p>
+					Ein Newtonmeter entspricht<br><br>
+					<div class="fragment popup delete" data-fragment-index="3">
+						<table>
+							<tr class="answer">
+								<td>a)</td>
+								<td>Einer Elle</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>b)</td>
+								<td>Einem Joule</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>c)</td>
+								<td>Einer Dioptrie</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>d)</td>
+								<td>Einem Grad Kelvin</td>
+							</tr>
+						</table>
+					</div>
+					<div class="fragment popup create" data-fragment-index="3">
+						<table>
+							<tr class="answer">
+								<td>a)</td>
+								<td>Einer Elle</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="rightanswer">
+								<td>b)</td>
+								<td>Einem Joule</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>c)</td>
+								<td>Einer Dioptrie</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>d)</td>
+								<td>Einem Grad Kelvin</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+
+
+				<section noPoints>
+					<p class="fragment ans_sound" data-fragment-index="2"></p>
+					<font size="7"> 
+					Ihr habt die Wahl zwischen drei Türen. Hinter einer Tür ist ein grüner Einstein, 
+					hinter den anderen beiden zwei kaputte Oszilloskope. Ihr wählen zunächst eine Tür, 
+					ohne sie zu öffnen. Der Moderator, öffnet eine der anderen Türen und zeigt ein Oszilloskop. 
+					Anschließend können Sie Ihre Wahl ändern. Was wäre die beste Türwahl? </font> <br><br>
+					<div class="fragment popup delete" data-fragment-index="3">
+						<table>
+							<tr class="answer">
+								<td>a)</td>
+								<td>Die Tür wechseln </td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>b)</td>
+								<td>Bei der ersten Wahl bleiben</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>c)</td>
+								<td>Es macht keinen Unterschied</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>d)</td>
+								<td>Die dritte Tür öffnen</td>
+							</tr>
+						</table>
+					</div>
+					<div class="fragment popup create" data-fragment-index="3">
+						<table>
+							<tr class="rightanswer">
+								<td>a)</td>
+								<td>Die Tür wechseln </td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>b)</td>
+								<td>Bei der ersten Wahl bleiben</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>c)</td>
+								<td>Es macht keinen Unterschied</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>d)</td>
+								<td>Die dritte Tür öffnen</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+
+				<section noPoints>
+					<p class="fragment ans_sound" data-fragment-index="2"></p>
+					Ein Fahrradreifen, der plötzlich platzt, ist ein Beispiel für  <br><br>
+					<div class="fragment popup delete" data-fragment-index="3">
+						<table>
+							<tr class="answer">
+								<td>a)</td>
+								<td>Isothermer Prozess </td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>b)</td>
+								<td>Adiabatischer Prozess</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>c)</td>
+								<td>Isochorer Prozess</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>d)</td>
+								<td>Isobarer Prozess</td>
+							</tr>
+						</table>
+					</div>
+					<div class="fragment popup create" data-fragment-index="3">
+						<table>
+							<tr class="answer">
+								<td>a)</td>
+								<td>Isothermer Prozess </td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="rightanswer">
+								<td>b)</td>
+								<td>Adiabatischer Prozess</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>c)</td>
+								<td>Isochorer Prozess</td>
+							</tr>
+							<tr><td></td></tr>
+							<tr class="answer">
+								<td>d)</td>
+								<td>Isobarer Prozess</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+
+
+
+
+			</section>
+
+
+				
+
+
+
+		
+	</section>
+
+
+			<section globalPoints noPoints>
+				<table width="100%" style="margin-left: 3%">
+					<tr>
+						<td>
+							<div class = container style="position: relative;">
+								<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+								<h1 style="position: absolute; top: 50%; left: 43%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Profs</nobr><p class="punkteProfs">0</p></h1>
+							</div>
+						</td>
+						<td>
+							<div class = container style="position: relative;">
+								<img data-src="media/Logos/Big_Phi_TUGreen.svg" width="90%" style="border: none; background: none; box-shadow: none;"/>
+								<h1 style="position: absolute; top: 50%; left: 44%; transform: translate(-50%, -50%); text-align: center;"> <nobr>Studis</nobr><p class="punkteStudis">0</p></h1>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</section>
+
+			<section noPoints>
+				<h1><span class="fragment prof_win" sound="final" data-fragment-index="1">🎉</span>Profs<span class="fragment prof_win" data-fragment-index="1">🎉</span></h1>
+				<h1><span class="fragment stud_win" data-fragment-index="1">🎉</span>Studis<span class="fragment stud_win" data-fragment-index="1">🎉</span></h1>
+				<h3 sound="final" class="fragment" data-fragment-index="2">Kommt gut nach Hause!</h3>
+			</section>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		Reveal.initialize({
+			math: {
+				mathjax: 'plugin/math/MathJax/MathJax.js',
+			},
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/math/math.js', async: true }
+			],
+
+			// Display presentation control arrows
+			controls: false,
+
+			// Help the user learn the controls by providing hints, for example by
+			// bouncing the down arrow when they first encounter a vertical slide
+			controlsTutorial: true,
+
+			// Determines where controls appear, "edges" or "bottom-right"
+			controlsLayout: 'bottom-right',
+
+			// Visibility rule for backwards navigation arrows; "faded", "hidden"
+			// or "visible"
+			controlsBackArrows: 'faded',
+
+			// Display a presentation progress bar
+			progress: false,
+
+			// Display the page number of the current slide
+			slideNumber: false,
+
+			// Push each slide change to the browser history
+			history: true,
+
+			// Enable keyboard shortcuts for navigation
+			keyboard: true,
+
+			keyboard: {
+                 39: 'next',
+                 37: 'prev'
+            },
+
+			width: 1920,
+			height: 1080,
+			
+			// Enable the slide overview mode
+			overview: true,
+
+			// Vertical centering of slides
+			center: true,
+
+			// Enables touch navigation on devices with touch input
+			touch: true,
+
+			// Loop the presentation
+			loop: false,
+
+			// Change the presentation direction to be RTL
+			rtl: false,
+
+			// Randomizes the order of slides each time the presentation loads
+			shuffle: false,
+
+			// Turns fragments on and off globally
+			fragments: true,
+
+			// Flags whether to include the current fragment in the URL,
+			// so that reloading brings you to the same fragment position
+			fragmentInURL: true,
+
+			// Flags if the presentation is running in an embedded mode,
+			// i.e. contained within a limited portion of the screen
+			embedded: false,
+
+			// Flags if we should show a help overlay when the questionmark
+			// key is pressed
+			help: false,
+
+			// Flags if speaker notes should be visible to all viewers
+			showNotes: false,
+
+			// Global override for autoplaying embedded media (video/audio/iframe)
+			// - null: Media will only autoplay if data-autoplay is present
+			// - true: All media will autoplay, regardless of individual setting
+			// - false: No media will autoplay, regardless of individual setting
+			autoPlayMedia: null,
+
+			// Number of milliseconds between automatically proceeding to the
+			// next slide, disabled when set to 0, this value can be overwritten
+			// by using a data-autoslide attribute on your slides
+			autoSlide: 0,
+
+			// Stop auto-sliding after user input
+			autoSlideStoppable: true,
+
+			// Use this method for navigation when auto-sliding
+			autoSlideMethod: Reveal.navigateNext,
+
+			// Specify the average time in seconds that you think you will spend
+			// presenting each slide. This is used to show a pacing timer in the
+			// speaker view
+			defaultTiming: 120,
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: false,
+
+			// Hides the address bar on mobile devices
+			hideAddressBar: true,
+
+			// Opens links in an iframe preview overlay
+			// Add `data-preview-link` and `data-preview-link="false"` to customise each link
+			// individually
+			previewLinks: false,
+
+			// Transition style
+			transition: 'zoom', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Transition style for full page slide backgrounds
+			backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+			// Number of slides away from the current that are visible
+			viewDistance: 3,
+
+			// Parallax background image
+			parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+			// Parallax background size
+			parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+			// Number of pixels to move the parallax background per slide
+			// - Calculated automatically unless specified
+			// - Set to 0 to disable movement along an axis
+			parallaxBackgroundHorizontal: null,
+			parallaxBackgroundVertical: null,
+
+			// The display mode that will be used to show slides
+			display: 'block'
+
+		});
+	</script>
+
+	<audio id="win_sound" volume="0.5">
+			<source src="media/sounds/win.mp3" type="audio/mp3"/>
+	</audio>
+	<audio id="one_up_sound" volume="0.5">
+			<source src="media/sounds/win.mp3" type="audio/mp3"/>
+	</audio>
+	<audio id="blop_sound" volume="0.5">
+			<source src="media/sounds/blop.mp3" type="audio/mp3"/>
+	</audio>
+	<audio id="final_sound" volume="0.5">
+			<source src="media/sounds/big_win.mp3" type="audio/mp3"/>
+	</audio>
+	<audio id="snap_sound" volume="0.5">
+			<source src="media/sounds/blop.mp3" type="audio/mp3"/>
+	</audio>
+	<audio id="answer_sound" volume="0.5">
+			<source src="media/sounds/blop.mp3" type="audio/mp3" delay="2500"/>
+	</audio>
+	<audio id="drumroll_sound" volume="0.9">
+		<source src="media/sounds/drumroll.mp3" type="audio/mp3" delay="2380"/>
+	</audio>
+	<script src="js/byp.js"></script>
+	<!-- Punktestand 2019 einbinden -->
+	<script src="js/spielstand.js"></script>
+
+
+	<script>
+		function makeSideBySide() {
+    		var container = document.querySelector('.image-text-slide');
+    		// container.classList.toggle('side-by-side-layout') 
+			// document.querySelector('.image-text-slide').classList.add('side-by-side-layout');
+			document.querySelector('.reveal .slides .present .image-text-slide').classList.add('side-by-side-layout');
+		};
+			
+		// Reveal.addEventListener('fragmentshown', function(event) {
+			// if (event.fragment.id === 'slideImage') {
+			// makeSideBySide();
+		// }
+		// });
+
+		Reveal.addEventListener('fragmentshown', function(event) {
+    // event.currentSlide is the slide that has just become visible
+    // Use querySelector within this slide to find .image-text-slide
+	
+    		// var imageTextSlide = event.currentSlide.querySelector('.image-text-slide');
+    		// if (imageTextSlide) {
+    		    // imageTextSlide.classList.add('side-by-side-layout');
+    		// }
+			// var imageTextSlide = event.currentSlide.querySelector('.image-text-slide');
+			var imageTextSlide = event.fragment.closest('.image-text-slide');
+			if (imageTextSlide) {
+			imageTextSlide.classList.add('side-by-side-layout');	}
+
+    		// if (imageTextSlide) {
+			// 	var slideImage = imageTextSlide.querySelector('#slideImage');
+        
+        	// 	// Apply the first class to the slideImage immediately
+        	// 	if (slideImage) {
+        	// 	    slideImage.classList.add('smallImage');
+			// 		setTimeout(function(){
+			// 			imageTextSlide.classList.add('side-by-side-layout');
+			// 		},5000)
+			// 		}
+        	// 	}	    
+			// document.querySelector('.present .image-text-slide').classList.add('side-by-side-layout');
+		});
+
+		// Reveal.addEventListener('fragmenthidden', function(event) {
+			// if (event.fragment.id === 'slideImage') {
+				// document.querySelector('.image-text-slide').classList.remove('side-by-side-layout');
+				// document.querySelector('.reveal .slides .present .image-text-slide').classList.remove('side-by-side-layout');
+			// }
+		// });
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+dark-blue: 0f192d
+light-blue: 13203a
+
+Font: Roboto
+Special Header Font: Harlow Solid Regular
+Harlow SH Solid

@@ -1,0 +1,2 @@
+points = JSON.parse("{\"None\":[0,0],\"Global\":[0,0],\"PhysikerRaten\":[0,0],\"AiBilderRaten\":[0,0],\"ViralOderEgal\":[0,0],\"BecherTurmDuell\":[0,0],\"KathioderKI?\":[0,0],\"Pantomime\":[0,0],\"Finale\":[0,0],\"FilmeErraten\":[0,0],\"AmericaSays\":[0,0],\"WiiTennis\":[0,0]}")
+// points = JSON.parse("{\"None\":[0,0],\"Global\":[0,0],\"PhysikerRaten\":[0,0],\"Montagsmaler\":[0,0],\"ViralOderEgal\":[0,0],\"Archive\":[0,0],\"MakeNBrake\":[0,0],\"Wiki\":[0,0],\"Finale\":[0,0],\"PapierfliegerFalten\":[0,0],\"AmericaSays\":[0,0],\"WiiTennis\":[0,0]}")

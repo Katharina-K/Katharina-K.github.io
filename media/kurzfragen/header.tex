@@ -1,0 +1,173 @@
+%%%%%%%%%%%%%%%
+% Party provided by PeP et. al. at their "Toolbox Workshop"
+% Thanks for that! Visit them on:
+% https://github.com/pep-dortmund/toolbox-workshop
+%%%%%%%%%%%%%%%
+
+% Make cover page
+\documentclass[14pt]{extarticle}
+
+% Better error output: Warn when latex has to run again
+\usepackage[aux]{rerunfilecheck}
+
+% math symbols
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% fonts
+\usepackage{fontspec}
+
+% german language support
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+% link support
+\usepackage[
+    unicode,
+    german,
+    pdfusetitle,
+    pdfcreator={},
+    pdfproducer={}
+]{hyperref}
+\usepackage{bookmark}
+
+% Make german quotes (via \enquote)
+\usepackage[autostyle]{csquotes}
+
+%Physics styles
+\usepackage[
+    math-style=ISO, 
+    bold-style=ISO, 
+    sans-style=italic, 
+    nabla=upright, 
+    partial=upright
+]{unicode-math}
+
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmonofont{Libertinus Mono}
+\setmathfont{Tex Gyre Pagella Math}
+
+\usepackage[
+    bottom=2cm,
+    top=1cm
+]{geometry}
+
+% numbers and units
+\usepackage[
+    locale=DE,
+    separate-uncertainty=true,  % use \pm
+    per-mode=symbol-or-fraction,
+    %per-mode=reciprocal,
+    %output-decimal-marker=.,
+]{siunitx}
+
+
+% Fix missing micro sign with TL2017
+\sisetup{
+    math-micro=\text{μ}, 
+    text-micro=μ,
+    range-phrase = --,
+    list-separator       = {, },
+    list-final-separator = { und },
+    range-units = single
+}
+
+% rändermaße
+%\usepackage[
+%    bottom=5cm
+%]{geometry}
+
+
+% fractions in text
+\usepackage{xfrac}
+
+% pictures
+\usepackage{graphicx}
+
+% Use _ in paths
+\usepackage{grffile}
+
+% tables
+\usepackage{booktabs}
+
+% optimizing look
+\usepackage{microtype}
+\usepackage[shortcuts]{extdash}
+\usepackage{mleftright}
+
+% this is us!
+\author{%
+  jDPG
+}
+% Tikz ist kein Zeichenprogramm
+\usepackage{tikz}
+
+% Übersichtlichere equation references 
+\numberwithin{equation}{section}
+
+% useful makros
+\usepackage{expl3}
+\usepackage{xparse}
+\ExplSyntaxOn
+
+\let\ltext=\l
+\RenewDocumentCommand \l {}
+{
+    \TextOrMath{ \ltext }{ \mleft }
+}
+\let\raccent=\raccent
+\RenewDocumentCommand \r {}
+{
+    \TextOrMath{ \raccent }{ \mright }
+}
+\NewDocumentCommand \dif {m}
+{
+    \mathinner{\symup{d} #1}
+}
+
+\ExplSyntaxOff
+\NewDocumentCommand \tindex {mm}
+{
+    {#1_{\symup{#2}}}
+}
+\ExplSyntaxOn
+
+\setlength{\delimitershortfall}{-1sp}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\bracket}{\left(}{\right)}
+\NewDocumentCommand\xDeclarePairedDelimeter{mmm}
+{%
+\NewDocumentCommand#1{som}{%
+\IfNoValueTF{##2}
+    {\IfBooleanTF{##1}{#2##3#3}{\mleft#2##3\mright#3}}
+{\mathopen{##2#2}##3\mathclose{##2#3}}%
+}%
+}
+\xDeclarePairedDelimeter{\set}{\lbrace}{\rbrace}
+
+\let\mysubsection=\subsection
+\RenewDocumentCommand\subsection{m}
+{
+    \FloatBarrier
+    \mysubsection{#1}
+}
+
+
+
+\AtBeginDocument{
+    \RenewDocumentCommand \Re {} {\operatorname{Re}}
+    \RenewDocumentCommand \Im {} {\operatorname{Im}}
+}
+\ExplSyntaxOff
+
+%%%%%% This can be helpful
+\newcommand{\fehlerfortpflanzung}{
+    \begin{equation}
+        \label{eqn:fehlerfortpflanzung}
+        \Delta f(x_1, x_2, \dots, x_{N}) = \sqrt{\sum_{i=0}^N \left(\frac{\partial f}{\partial x_i}\Delta x_i\right)^2}
+    \end{equation}
+}
